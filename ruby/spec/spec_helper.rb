@@ -16,6 +16,15 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+
+GILDED_ROSE_FILE = 'gilded_rose'
+#GILDED_ROSE_FILE = 'gilded_rose_refactored_1'
+#GILDED_ROSE_FILE = 'gilded_rose_refactored_2'
+#GILDED_ROSE_FILE = 'gilded_rose_refactored_by_ania'
+
+require File.join(File.dirname(__FILE__) + '/..', GILDED_ROSE_FILE)
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
