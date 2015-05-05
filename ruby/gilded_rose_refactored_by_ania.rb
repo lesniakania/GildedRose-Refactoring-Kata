@@ -1,35 +1,9 @@
-class ItemWrapper
+require 'delegate'
+
+class ItemWrapper < SimpleDelegator
   MAX_QUALITY = 50
 
   attr_accessor :item
-
-  def initialize(item)
-    @item = item
-  end
-
-  def name
-    item.name
-  end
-
-  def sell_in
-    item.sell_in
-  end
-
-  def quality
-    item.quality
-  end
-
-  def name=(name)
-    item.name = name
-  end
-
-  def sell_in=(sell_in)
-    item.sell_in = sell_in
-  end
-
-  def quality=(quality)
-    item.quality = quality
-  end
 
   def update_sell_in
     self.sell_in -= 1
